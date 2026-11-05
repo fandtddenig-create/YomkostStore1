@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f9ff">
+<meta name="description" content="Yomkost Store: готові цифрові продукти та розробка сайтів, ботів і Roblox проєктів на замовлення">
+<title>Yomkost Store, цифрові продукти</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232f80ed'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='700' text-anchor='middle' fill='%23ffffff' font-family='sans-serif'%3EY%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wake" id="wake" role="status">Сервер прокидається, це займе до хвилини</div>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">Y</span><span class="brand-name">Yomkost</span></a>
+  <nav class="nav" id="nav">
+    <a href="#catalog">Каталог</a>
+    <a href="#how">Як це працює</a>
+    <a href="#services">Розробка</a>
+    <a href="#about">Про нас</a>
+  </nav>
+  <div class="top-actions">
+    <button class="icon-btn" id="favoritesButton" aria-label="Обране"><svg viewBox="0 0 24 24"><path d="M12 20.5S4 15.4 4 9.6A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.6c0 5.8-8 10.9-8 10.9z"/></svg></button>
+    <button class="icon-btn" id="cartButton" aria-label="Кошик"><svg viewBox="0 0 24 24"><path d="M5 7h14l-1.3 11.2a1.5 1.5 0 0 1-1.5 1.3H7.8a1.5 1.5 0 0 1-1.5-1.3L5 7zM9 7V6a3 3 0 0 1 6 0v1"/></svg><span class="count" id="cartCount">0</span></button>
+    <button class="reg-btn" id="registerButton">Реєстрація</button><button class="login-btn" id="loginButton">Увійти</button>
+    <button class="icon-btn menu-btn" id="menuButton" aria-label="Меню"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="badge"><i></i>Працюємо по всій Україні</span>
+      <h1>Цифрові продукти,<br>які <em>економлять твій час</em></h1>
+      <p class="lead">Готові шаблони, скрипти та модулі в каталозі. А якщо потрібно щось своє, зробимо під твою задачу.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-dark" href="#catalog">Дивитись каталог</a>
+        <button class="btn btn-ghost" id="heroDevButton">Замовити розробку</button>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="sheet sheet-a"><b>Шаблон сайту</b><span></span><span></span><span class="short"></span></div>
+      <div class="sheet sheet-b"><b>Python скрипт</b><code>run_report()</code><span class="pill">299 ₴</span></div>
+      <div class="sheet sheet-c"><b>Roblox модуль</b><div class="bars"><i></i><i></i><i></i><i></i></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="catalog">
+    <div class="section-head">
+      <h2>Каталог</h2>
+      <span class="muted" id="catalogCount">Завантаження</span>
+    </div>
+    <div class="toolbar">
+      <div class="tabs" id="categoryTabs"><button class="tab active" data-category="all">Усі товари</button></div>
+      <div class="controls">
+        <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="searchInput" type="search" placeholder="Пошук товарів"></label>
+        <select id="sortSelect" aria-label="Сортування"><option value="new">Спочатку нові</option><option value="popular">Популярні</option><option value="cheap">Від дешевих</option><option value="expensive">Від дорогих</option></select>
+      </div>
+    </div>
+    <div id="productGrid" class="grid"><div class="empty">Завантажуємо каталог</div></div>
+  </section>
+
+  <section class="section how" id="how">
+    <h2>Як це працює</h2>
+    <div class="steps">
+      <div><h3>Обираєш товар</h3><p>Додаєш у кошик і оформлюєш замовлення за хвилину. Потрібен лише акаунт.</p></div>
+      <div><h3>Оплачуєш зручно</h3><p>Переказ за реквізитами, оплата з внутрішнього балансу або домовленість із менеджером.</p></div>
+      <div><h3>Отримуєш результат</h3><p>Менеджер вручну перевіряє оплату, і доступ до товару з’являється в твоєму кабінеті.</p></div>
+    </div>
+  </section>
+
+  <section class="band" id="services">
+    <div>
+      <h2>Є ідея? Зробимо її реальною</h2>
+      <p>Сайти, боти, Roblox системи та Python рішення під конкретні задачі. Опиши завдання в п’ять кроків, розробник узгодить ціну й терміни, ти оплатиш за QR, а готовий результат отримаєш у кабінеті.</p>
+    </div>
+    <button class="btn btn-light" id="devOrderButton">Замовити розробку</button>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>Менше шуму, більше результату</h2>
+    <p>Yomkost Store це місце, де можна купити готовий цифровий продукт або замовити власне рішення. Кожне замовлення перевіряється вручну, а опис і фото товарів ми додаємо самі, без автоматичних шаблонних карток.</p>
+  </section>
+</main>
+
+<footer>
+  <a class="brand" href="#home"><span class="brand-mark">Y</span><span class="brand-name">Yomkost</span></a>
+  <span>© 2026 Yomkost. Усі права захищені</span>
+  <a href="mailto:yomkostrbl@gmail.com">yomkostrbl@gmail.com</a>
+</footer>
+
+<div class="dialog-backdrop" id="accountDialog" aria-hidden="true"><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="accountTitle"><button class="dialog-close" id="dialogClose" aria-label="Закрити">×</button><div id="accountDialogContent"></div></section></div>
+<div class="dialog-backdrop" id="cartDialog" aria-hidden="true"><section class="dialog wide" role="dialog" aria-modal="true"><button class="dialog-close" id="cartDialogClose" aria-label="Закрити">×</button><div id="cartDialogContent"></div></section></div>
+<div class="dialog-backdrop" id="productDialog" aria-hidden="true"><section class="dialog" role="dialog" aria-modal="true"><button class="dialog-close" id="productDialogClose" aria-label="Закрити">×</button><div id="productDialogContent"></div></section></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
